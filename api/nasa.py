@@ -116,3 +116,16 @@ def search_nasa_images(query: str,
     }
 
     return make_api_request(base_url, params, timeout=15)
+
+
+if __name__ == "__main__":    # Example usage
+    apod = get_nasa_apod()
+    if apod:
+        print(f"Title: {apod['title']}")
+        print(f"Explanation: {apod['explanation']}")
+        print(f"Image URL: {apod['url']}")
+
+    search_results = search_nasa_images("Mars rover", size=5)
+    if search_results:
+        for item in search_results["collection"]["items"]:
+            print(item["data"][0]["title"])

@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "nasa-mcp": {
+      "type": "stdio",
+      "command": "/opt/homebrew/bin/uv",
+      "args": ["--directory", "/Users/muralichadalawada/Documents/Projects/nasa_pic/nasa-mcp", "run", "nasa_mcp_server.py"],
+    }
+  }
+}
